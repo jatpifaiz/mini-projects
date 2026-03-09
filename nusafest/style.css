@@ -1,0 +1,491 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #1a1a1a;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 1em;
+}
+
+.title-header {
+  font-size: 2em;
+}
+
+hr {
+  opacity: 85%;
+}
+
+a {
+  text-decoration: none;
+  color: #1a1a1a;
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:hover {
+  color: #9e2a2f;
+  text-decoration: underline;
+}
+
+nav {
+  display: flex;
+  gap: 1em;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+}
+
+h1,
+h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 3.4em;
+}
+
+h3,
+h4 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 1.8em;
+}
+
+body,
+p,
+li {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+span {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  padding: 1.4rem 2.4rem;
+  font-size: 1.2rem;
+}
+
+#home img {
+  width: 560px;
+  height: auto;
+  display: flex;
+  margin-left: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+#home img:hover {
+  transform: scale(1.5);
+  border-radius: 16px;
+}
+
+#home article {
+  margin-top: 12px;
+  padding: 0 4px;
+  display: flex;
+}
+
+#home article p {
+  font-size: 1.1em;
+}
+
+#home a {
+  border: 2px solid black;
+  padding: 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.2em;
+  transition: all 0.4s ease-in-out;
+}
+
+#home a:hover {
+  background-color: #9e2a2f;
+  color: #fffff0;
+}
+
+.cta {
+  display: flex;
+  gap: 16px;
+}
+
+.home-title::before {
+  content: "✨";
+}
+
+.home-title::after {
+  content: "✨";
+}
+
+#tentang {
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem 2.4rem 0 2.4rem;
+  font-size: 1.2rem;
+}
+
+#tentang p {
+  margin-left: 1.8rem;
+}
+
+#tentang .container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 1.2em;
+  height: 100vh;
+}
+
+#tentang .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+#tentang .item p {
+  margin: 15px 0;
+}
+
+#tentang .item span {
+  font-weight: 700;
+  font-style: normal;
+}
+
+#tentang .container .item img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+#tentang .kanan {
+  align-self: flex-start;
+}
+
+#tentang .tengah {
+  align-self: flex-end;
+}
+
+#tentang .kiri {
+  align-self: flex-start;
+}
+
+#jadwal {
+  height: 160vh;
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.jadwal {
+  background-color: #9e2a2f;
+  color: #f5f5f5;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 1.2rem;
+}
+
+#jadwal .sub-jadwal {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#jadwal ul {
+  margin-bottom: 8px;
+}
+
+#jadwal ul .kegiatan {
+  list-style-type: circle;
+}
+
+#jadwal li {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 0;
+  text-align: justify;
+}
+
+#jadwal .sub-jadwal p {
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 0.4rem;
+}
+
+#jadwal h3 {
+  margin: 1.4rem;
+}
+
+#jadwal h2 {
+  padding-top: 1.8rem;
+}
+
+#jadwal hr {
+  border: none;
+  height: 2px;
+  background-color: black;
+  opacity: 20%;
+  width: 75%;
+  margin: 0 auto;
+}
+
+#lokasi {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2.4rem;
+  font-size: 1.2rem;
+}
+
+#lokasi .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+}
+
+#lokasi p {
+  padding: 0.8rem;
+  margin-left: 1.8rem;
+}
+
+#lokasi li {
+  padding: 2rem 1rem;
+  list-style-type: circle;
+}
+
+#lokasi span {
+  font-style: normal;
+}
+
+#lokasi .peta {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+  width: auto;
+  padding: 2px;
+}
+
+#lokasi hr {
+  width: 85%;
+  margin: 0 auto;
+  opacity: 75%;
+}
+
+.peta h3 {
+  margin-right: 10rem;
+}
+
+iframe {
+  width: 40vw;
+  height: auto;
+}
+
+#tiket {
+  height: 160vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2.4rem;
+  font-size: 1.2rem;
+}
+
+#tiket .pendahuluan {
+  margin-left: 1rem;
+}
+
+#tiket h3 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 1.4rem 0;
+}
+
+#tiket .item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 2rem;
+  text-align: justify;
+}
+
+#tiket .cara {
+  display: flex;
+  gap: 12px;
+}
+
+#tiket .cara-beli {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+#tiket .cara-beli:hover {
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.cara-beli .kiri {
+  text-align: left;
+  margin: 0;
+}
+
+.cara-beli .kanan {
+  text-align: right;
+}
+
+#tiket hr {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#tiket .harga {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#tiket .jenis-tiket {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+#tiket .tiket {
+  background-color: #f5f5f5;
+  color: #1a1a1a;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  padding: 4px;
+}
+
+#tiket .tiket:hover {
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+  border-radius: 8px;
+}
+
+#tiket ul {
+  display: flex;
+  margin-top: 18px;
+}
+
+#tiket li {
+  list-style-type: none;
+}
+
+#tiket .cta-beli {
+  border: 2px solid #1a1a1a;
+  padding: 8px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  transition: all 0.4s ease-in-out;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.4rem auto;
+}
+
+#tiket .cta-beli:hover {
+  background-color: #9e2a2f;
+  color: #f5f5f5;
+}
+
+#tiket .jenis-fasilitas {
+  display: flex;
+  gap: 12px;
+}
+
+#tiket .fasilitas {
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+#tiket .fasilitas:hover {
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+  border-radius: 8px;
+}
+
+#galeri {
+  height: 160vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2.4rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+#galeri span {
+  margin-left: 1.4rem;
+}
+
+#galeri p {
+  margin-bottom: 1rem;
+}
+
+#galeri hr {
+  border: none;
+  height: 2px;
+  background-color: black;
+  opacity: 20%;
+  width: 75%;
+  margin: 1rem auto;
+}
+
+#galeri .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+#galeri .grid-container img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+#galeri .grid-container img:hover {
+  transform: scale(1.05);
+}
