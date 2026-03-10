@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do App Karyawan</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>To Do Karyawan</h1>
+
+    <div class="btn-container" id="btn-container">
+      <button class="btn" id="btn-all">All</button>
+      <button class="btn" id="btn-completed">Completed</button>
+      <button class="btn" id="btn-uncompleted">Uncompleted</button>
+    </div>
+
+    <div class="task-container" id="task-container">
+      <ul id="task-list"></ul>
+    </div>
+    <dialog id="add-task-dialog">
+      <input type="text" placeholder="Tugas hari ini..." id="task-input" />
+      <button class="btn" id="submit-task-btn">Submit Task</button>
+      <button class="close-btn" id="close-btn">Close</button>
+    </dialog>
+    <button class="btn" id="open-add-task-btn">Add Task</button>
+    <script src="main.js"></script>
+  </body>
+</html>
