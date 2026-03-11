@@ -3,7 +3,7 @@ const easyButton = document.getElementById("easy");
 const mediumButton = document.getElementById("medium");
 const hardButton = document.getElementById("hard");
 const levelSelectionContainer = document.querySelector(
-  ".level-selection-container"
+  ".level-selection-container",
 );
 const difficultyLabel = document.getElementById("difficulty-label");
 const healthLabel = document.getElementById("health");
@@ -127,8 +127,9 @@ function startGame(config) {
       inputGuess.value = current - 1;
     }
   });
+
   increaseHandler.addEventListener("click", () => {
-    let current = Number(input.value) || 1;
+    let current = Number(inputGuess.value) || 1;
     if (current < gameState.maxNumber) {
       inputGuess.value = current + 1;
     }
@@ -154,7 +155,7 @@ function startGame(config) {
       healthLabel.innerText = `Health: ${gameState.userHealth}`;
       if (gameState.userHealth === 0) {
         console.log(
-          `kamu kehabisan kesempatan! \n jawabannya: ${gameState.computerNum}`
+          `kamu kehabisan kesempatan! \n jawabannya: ${gameState.computerNum}`,
         );
         container.querySelector(".handler-container").append(resetButton);
         buttonSubmit.remove();
