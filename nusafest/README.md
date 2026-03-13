@@ -35,13 +35,13 @@ Buka file "index.html" di browser.
 ## Preview
 
 **Hero Section**
-![Hero Section Preview](/docs/images/hero-section-nusafest-preview.png)
+![Hero Section Preview](docs/images/hero-section-nusafest-preview.png)
 
 **About Section**
-![About Section Preview](/docs/images/about-nusafest-preview.png)
+![About Section Preview](docs/images/about-nusafest-preview.png)
 
 **Menu Pembelian Tiket**
-![Menu Beli Tiket Preview](/docs/images/menu-beli-tiket-nusafest-preview.png)
+![Menu Beli Tiket Preview](docs/images/menu-beli-tiket-nusafest-preview.png)
 
 ## Author
 
