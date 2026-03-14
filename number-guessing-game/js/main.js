@@ -12,7 +12,6 @@ let inputGuess = document.getElementById("input-guess");
 const decreaseHandler = document.getElementById("decrease-handler");
 const increaseHandler = document.getElementById("increase-handler");
 
-// document.getElementById("decrease-handler").addEventListener("click", () => {});
 document.querySelector(".level-selection-container").classList.remove("active");
 document.getElementById("container").classList.add("active");
 
@@ -23,12 +22,15 @@ resetButton.addEventListener("click", resetGame);
 
 container.style.display = "none";
 
+let maxNumber;
+
 easyButton.addEventListener("click", () => {
   const config = setDifficulty("easy");
   container.classList.add("container");
   container.style.display = "block";
   difficultyLabel.innerText = "Difficulty: Easy";
   startGame(config);
+  return (maxNumber = config.maxNumber);
 });
 
 mediumButton.addEventListener("click", () => {
@@ -36,6 +38,7 @@ mediumButton.addEventListener("click", () => {
   container.classList.add("container");
   difficultyLabel.innerText = "Difficulty: Medium";
   startGame(config);
+  return (maxNumber = config.maxNumber);
 });
 
 hardButton.addEventListener("click", () => {
@@ -43,6 +46,7 @@ hardButton.addEventListener("click", () => {
   container.classList.add("container");
   difficultyLabel.innerText = "Difficulty: Hard";
   startGame(config);
+  return (maxNumber = config.maxNumber);
 });
 
 const setDifficulty = (difficulty) => {
@@ -102,6 +106,25 @@ const checkGuess = (comp, user) => {
 
 let currentGame = null;
 
+const decreaseGuess = () => {
+  let current = Number(inputGuess.value) || 1;
+  if (current > 1) {
+    inputGuess.value = current - 1;
+  }
+};
+
+decreaseHandler.addEventListener("click", decreaseGuess);
+
+const increaseGuess = () => {
+  let current = Number(inputGuess.value) || 1;
+  if (current < maxNumber) {
+    inputGuess.value = current + 1;
+  }
+  console.log("clicked");
+};
+
+increaseHandler.addEventListener("click", increaseGuess);
+
 function startGame(config) {
   levelSelectionContainer.style.display = "none";
   container.style.display = "block";
@@ -119,21 +142,7 @@ function startGame(config) {
 
   inputGuess.min = 1;
   inputGuess.max = gameState.maxNumber;
-  inputGuess.value = "";
-
-  decreaseHandler.addEventListener("click", () => {
-    let current = Number(inputGuess.value) || 1;
-    if (current > 1) {
-      inputGuess.value = current - 1;
-    }
-  });
-
-  increaseHandler.addEventListener("click", () => {
-    let current = Number(inputGuess.value) || 1;
-    if (current < gameState.maxNumber) {
-      inputGuess.value = current + 1;
-    }
-  });
+  inputGuess.value = 1;
 
   const buttonSubmit = document.createElement("button");
   buttonSubmit.innerText = "Submit!";
@@ -182,6 +191,9 @@ function resetGame() {
   levelSelectionContainer.style.display = "flex";
   document.getElementById("announcement").innerText = "";
   hint.innerText = "";
-  inputGuess.value = "";
   currentGame = null;
+  increaseHandler.disabled = false;
+  decreaseHandler.disabled = false;
+  increaseHandler.removeEventListener;
+  decreaseHandler.removeEventListener;
 }
