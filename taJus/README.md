@@ -12,7 +12,7 @@ taJus adalah website simulasi usaha jus yang memiliki keunggulan, juga merupakan
 - Hero Section
 - About Section
 - Product Showcase (Bento)
-- Responsive layout
+- Footer
 
 ## Tech Stack
 
@@ -25,7 +25,6 @@ taJus adalah website simulasi usaha jus yang memiliki keunggulan, juga merupakan
 - Layout website
 - Layout Bento
 - Flexbox and CSS Grid
-- Responsive design
 - Struktur section pada website
 
 ## How to Run
@@ -45,6 +44,9 @@ Buka file "index.html" di browser.
 **Bento Grid**
 
 ![Bento Grid Preview](docs/images/bento-grid-preview.png)
+
+**Footer**
+![Footer Preview](docs/images/tajus-footer-preview.png)
 
 ## Author
 
