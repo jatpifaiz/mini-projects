@@ -91,6 +91,28 @@ Project-project ini tidak menggunakan backend atau database dan berjalan sepenuh
   </tbody>
 </table>
 
+### CLI & Console App
+
+<table>
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Deskripsi</th>
+      <th>Tech Stack</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="./mini-kasir/"><b>mini-kasir</b></a></td>
+      <td>Simulasi keranjang belanja via console. Latihan CRUD array dan validasi input</td>
+      <td>
+        <img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white"/>
+        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ## Struktur Tiap Folder
 
 ```
